@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Prasad IAS Academy - UPSC और State PCS की तैयारी के लिए मार्गदर्शन, कक्षाएँ, टेस्ट सीरीज़ और करंट अफेयर्स।">
+<title>Prasad IAS Academy | UPSC & State PCS Preparation</title>
+<style>
+:root{--navy:#102b4e;--blue:#174f82;--gold:#e4ad45;--ink:#182536;--muted:#657487;--paper:#f5f7fa;--white:#fff;--line:#e5eaf0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,"Noto Sans Devanagari",sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+a{color:inherit;text-decoration:none}.topbar{background:var(--navy);color:#eaf2fa;padding:8px 5%;font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+header{background:#fff;position:sticky;top:0;z-index:10;box-shadow:0 2px 12px #102b4e12}.nav{max-width:1180px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;color:var(--navy);font-weight:800;font-size:20px;line-height:1.15}.logo{width:46px;height:46px;border-radius:12px;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-family:Georgia,serif;font-size:22px;border:2px solid var(--gold)}
+.brand small{display:block;font-size:10px;letter-spacing:1.8px;color:var(--muted);margin-top:4px}
+nav{display:flex;align-items:center;gap:22px;font-size:14px;font-weight:700;color:#34475c}nav a:hover{color:#b47a16}.navbtn,.btn{display:inline-block;background:var(--gold);color:#172b40;padding:11px 18px;border-radius:6px;font-weight:800;border:0;cursor:pointer}
+.menu{display:none;background:none;border:1px solid var(--line);padding:8px 11px;border-radius:6px;font-size:20px}
+.hero{background:linear-gradient(115deg,#102b4e 0%,#174f82 70%,#21618d 100%);color:white;overflow:hidden}
+.hero-inner{max-width:1180px;margin:auto;padding:78px 22px 76px;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.eyebrow{color:#f4c86e;font-weight:800;letter-spacing:1.6px;font-size:13px;text-transform:uppercase}
+h1{font-size:clamp(34px,5vw,58px);line-height:1.12;margin:14px 0 18px;max-width:680px}
+.hero p{font-size:17px;color:#e2edf7;max-width:620px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn-outline{border:1px solid #c5d8e8;color:#fff;padding:10px 18px;border-radius:6px;font-weight:700}
+.hero-card{background:#fff;color:var(--ink);border-radius:16px;padding:28px;box-shadow:0 20px 50px #071a2c55;transform:rotate(1deg)}
+.hero-card h3{margin:0 0 8px;color:var(--navy);font-size:22px}.hero-card p{color:var(--muted);font-size:14px;margin:0 0 18px}
+.statgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.stat{background:var(--paper);padding:15px;border-radius:10px}.stat b{display:block;color:var(--blue);font-size:23px}.stat span{font-size:12px;color:var(--muted)}
+section{padding:66px 22px}.container{max-width:1180px;margin:auto}.section-head{text-align:center;max-width:720px;margin:0 auto 34px}.section-head .eyebrow{color:#b47a16}.section-head h2{font-size:32px;color:var(--navy);margin:7px 0}.section-head p{color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{border:1px solid var(--line);border-radius:12px;padding:24px;background:#fff;box-shadow:0 7px 24px #102b4e08}.card .symbol{width:46px;height:46px;border-radius:10px;background:#edf4fa;color:var(--blue);display:grid;place-items:center;font-size:23px;margin-bottom:15px}.card h3{color:var(--navy);margin:0 0 8px;font-size:19px}.card p{color:var(--muted);font-size:14px;margin:0 0 14px}.more{font-weight:800;color:#a56b0c;font-size:14px}
+.soft{background:var(--paper)}.split{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:center}.feature-panel{background:var(--navy);color:#fff;border-radius:16px;padding:30px}.feature-panel h3{font-size:24px;margin:0 0 12px}.feature-panel p{color:#d7e5f1}.checklist{padding:0;list-style:none}.checklist li{padding:9px 0;border-bottom:1px solid #ffffff20}.checklist li:before{content:"✓";color:var(--gold);font-weight:bold;margin-right:10px}
+.news-list{display:grid;gap:12px}.news-item{background:#fff;border:1px solid var(--line);border-radius:10px;padding:17px 19px;display:flex;justify-content:space-between;gap:18px;align-items:center}.news-item b{color:var(--navy)}.tag{background:#fff4d9;color:#865b0b;padding:4px 9px;border-radius:20px;font-size:11px;font-weight:800;white-space:nowrap}
+.cta{background:#f8f1e4;text-align:center}.cta h2{color:var(--navy);font-size:30px;margin:0 0 8px}.cta p{color:var(--muted);margin:0 auto 22px;max-width:650px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:700px;margin:22px auto 0}input,select,textarea{width:100%;padding:13px;border:1px solid #d7dee7;border-radius:7px;font:inherit;background:#fff}textarea{grid-column:1/-1;min-height:90px}form button{grid-column:1/-1}
+footer{background:#0b2038;color:#d7e3ef;padding:42px 22px 20px}.footer-inner{max-width:1180px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}.footer-inner h3,.footer-inner h4{color:#fff;margin-top:0}.footer-inner p,.footer-inner a{font-size:14px;color:#c0cfdd}.footer-inner a{display:block;margin:7px 0}.copyright{max-width:1180px;margin:28px auto 0;border-top:1px solid #ffffff22;padding-top:16px;font-size:12px;color:#a9bbcd}
+@media(max-width:850px){nav{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;padding:18px 24px;box-shadow:0 10px 20px #0001;flex-direction:column;align-items:flex-start}.nav.open nav{display:flex}.menu{display:block}.navbtn{display:none}.hero-inner{grid-template-columns:1fr;padding-top:55px}.hero-card{max-width:520px}.cards{grid-template-columns:1fr 1fr}.split{grid-template-columns:1fr}.footer-inner{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.topbar{font-size:11px}.brand{font-size:17px}.logo{width:40px;height:40px}.cards{grid-template-columns:1fr}section{padding:48px 18px}.hero-inner{padding:48px 18px}.hero-card{padding:21px}.news-item{align-items:flex-start;flex-direction:column}.footer-inner{grid-template-columns:1fr}form{grid-template-columns:1fr}textarea,form button{grid-column:auto}}
+</style>
+</head>
+<body>
+<div class="topbar"><span>📚 UPSC • BPSC • State PCS तैयारी</span><span>Admissions Open | संपर्क: +91-XXXXXXXXXX</span></div>
+<header>
+ <div class="nav" id="nav">
+  <a class="brand" href="#home"><span class="logo">P</span><span>PRASAD IAS ACADEMY<small>LEARN • PREPARE • ACHIEVE</small></span></a>
+  <nav>
+   <a href="#home">होम</a><a href="#about">हमारे बारे में</a><a href="#courses">कोर्स</a><a href="#current">करंट अफेयर्स</a><a href="#tests">टेस्ट सीरीज़</a><a href="#contact">संपर्क</a>
+  </nav>
+  <a class="navbtn" href="#contact">अभी जुड़ें</a>
+  <button class="menu" aria-label="मेन्यू खोलें" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+ </div>
+</header>
+<main>
+<section class="hero" id="home">
+ <div class="hero-inner">
+  <div><div class="eyebrow">आपकी सफलता की तैयारी, सही मार्गदर्शन के साथ</div>
+   <h1>सपनों को लक्ष्य बनाइए, <span style="color:#f4c86e">तैयारी को दिशा</span> दीजिए।</h1>
+   <p>Prasad IAS Academy में UPSC, BPSC और अन्य प्रतियोगी परीक्षाओं के लिए व्यवस्थित अध्ययन, नियमित अभ्यास और समसामयिक घटनाओं की समझ विकसित करें।</p>
+   <div class="hero-actions"><a class="btn" href="#courses">कोर्स देखें</a><a class="btn-outline" href="#contact">काउंसलिंग के लिए संपर्क करें</a></div>
+  </div>
+  <div class="hero-card"><h3>आपकी तैयारी का अगला कदम</h3><p>Concept clarity से answer writing तक — एक व्यवस्थित learning journey.</p>
+   <div class="statgrid"><div class="stat"><b>GS</b><span>General Studies</span></div><div class="stat"><b>CSAT</b><span>अभ्यास एवं रणनीति</span></div><div class="stat"><b>CA</b><span>Current Affairs</span></div><div class="stat"><b>PYQ</b><span>पिछले वर्षों के प्रश्न</span></div></div>
+  </div>
+ </div>
+</section>
+<section id="about"><div class="container split">
+ <div><div class="eyebrow">हमारे बारे में</div><h2 style="color:var(--navy);font-size:32px">सीखने से लेकर सफलता तक</h2>
+  <p style="color:var(--muted)">Prasad IAS Academy का उद्देश्य अभ्यर्थियों को स्पष्ट अवधारणाओं, अनुशासित अध्ययन और निरंतर मूल्यांकन के माध्यम से प्रतियोगी परीक्षाओं की तैयारी में सहयोग देना है।</p>
+  <p style="color:var(--muted)">यह वेबसाइट एक शैक्षणिक सूचना-पोर्टल का प्रारूप है। संस्थान के वास्तविक विवरण, शिक्षक परिचय, उपलब्धियों और संपर्क जानकारी को अपनी जानकारी के अनुसार अपडेट करें।</p>
+  <a class="more" href="#contact">हमसे बात करें →</a>
+ </div>
+ <div class="feature-panel"><h3>हमारी शिक्षण प्राथमिकताएँ</h3><ul class="checklist"><li>बेसिक कॉन्सेप्ट की मजबूत समझ</li><li>सिलेबस आधारित अध्ययन योजना</li><li>नियमित MCQ और PYQ अभ्यास</li><li>उत्तर लेखन एवं मूल्यांकन</li><li>समसामयिक घटनाओं का विश्लेषण</li></ul></div>
+</div></section>
+<section class="soft" id="courses"><div class="container"><div class="section-head"><div class="eyebrow">हमारे कार्यक्रम</div><h2>Courses & Preparation</h2><p>अपनी परीक्षा और तैयारी के स्तर के अनुसार अध्ययन कार्यक्रम चुनें।</p></div>
+ <div class="cards">
+  <article class="card"><div class="symbol">🏛️</div><h3>UPSC Civil Services</h3><p>Prelims, Mains और Interview की तैयारी के लिए GS, CSAT, Essay और Answer Writing पर केंद्रित अध्ययन।</p><a class="more" href="#contact">विवरण प्राप्त करें →</a></article>
+  <article class="card"><div class="symbol">📘</div><h3>BPSC / State PCS</h3><p>राज्य विशेष सामान्य अध्ययन, इतिहास, भूगोल, राजव्यवस्था, अर्थव्यवस्था और समसामयिक घटनाएँ।</p><a class="more" href="#contact">विवरण प्राप्त करें →</a></article>
+  <article class="card"><div class="symbol">✍️</div><h3>Test Series</h3><p>विषयवार अभ्यास, फुल-लेंथ टेस्ट, PYQ आधारित प्रश्न और प्रदर्शन सुधारने के लिए विश्लेषण।</p><a class="more" href="#tests">टेस्ट देखें →</a></article>
+ </div>
+</div></section>
+<section id="current"><div class="container"><div class="section-head"><div class="eyebrow">Daily Learning</div><h2>Current Affairs & Study Material</h2><p>महत्वपूर्ण राष्ट्रीय और अंतरराष्ट्रीय घटनाओं को परीक्षा उपयोगी नोट्स में पढ़ें।</p></div>
+ <div class="news-list">
+  <div class="news-item"><div><b>Global Innovation Index (GII)</b><br><small>WIPO, Innovation Input और Output, भारत की स्थिति</small></div><span class="tag">GS-3</span></div>
+  <div class="news-item"><div><b>International Relations</b><br><small>APEC, Indo-Pacific और भारत के आर्थिक संबंध</small></div><span class="tag">GS-2</span></div>
+  <div class="news-item"><div><b>भारतीय राजव्यवस्था</b><br><small>संविधान, संसद, संघवाद और शासन</small></div><span class="tag">GS-2</span></div>
+ </div>
+ <p style="text-align:center;color:var(--muted);font-size:12px;margin-top:16px">नोट: ऊपर दिए गए विषय डेमो सामग्री हैं। नवीनतम तथ्यों को प्रकाशित करने से पहले आधिकारिक स्रोतों से जाँचें।</p>
+</div></section>
+<section class="soft" id="tests"><div class="container"><div class="section-head"><div class="eyebrow">Practice • Evaluate • Improve</div><h2>Test Series & अभ्यास</h2><p>नियमित अभ्यास से समय प्रबंधन, प्रश्न समझने और उत्तर प्रस्तुत करने की क्षमता विकसित करें।</p></div>
+ <div class="cards">
+  <article class="card"><div class="symbol">📝</div><h3>Prelims MCQ Practice</h3><p>विषयवार वस्तुनिष्ठ प्रश्न और व्याख्या आधारित अभ्यास।</p></article>
+  <article class="card"><div class="symbol">📄</div><h3>Mains Answer Writing</h3><p>GS के प्रश्नों पर संरचित उत्तर लेखन और प्रस्तुति का अभ्यास।</p></article>
+  <article class="card"><div class="symbol">📊</div><h3>Performance Review</h3><p>टेस्ट के बाद गलतियों की पहचान और सुधार के लिए फीडबैक।</p></article>
+ </div>
+</div></section>
+<section class="cta" id="contact"><div class="container"><h2>अपनी तैयारी की शुरुआत आज करें</h2><p>कोर्स, बैच, फीस और काउंसलिंग से जुड़ी जानकारी के लिए अपना विवरण भेजें।</p>
+ <form onsubmit="event.preventDefault();alert('यह डेमो फॉर्म है। इसे चालू करने के लिए ईमेल, WhatsApp या सर्वर से जोड़ना होगा।');">
+  <input required placeholder="आपका नाम" aria-label="आपका नाम">
+  <input required type="tel" placeholder="मोबाइल नंबर" aria-label="मोबाइल नंबर">
+  <select aria-label="कोर्स चुनें"><option>कोर्स चुनें</option><option>UPSC</option><option>BPSC / State PCS</option><option>Test Series</option></select>
+  <input type="email" placeholder="ईमेल (वैकल्पिक)" aria-label="ईमेल">
+  <textarea placeholder="आप क्या जानकारी चाहते हैं?" aria-label="संदेश"></textarea>
+  <button class="btn" type="submit">जानकारी भेजें</button>
+ </form>
+ <p style="font-size:13px;margin-top:15px">फोन/WhatsApp: +91-XXXXXXXXXX | ईमेल: info@prasadiasacademy.in (डेमो विवरण)</p>
+</div></section>
+</main>
+<footer><div class="footer-inner">
+ <div><h3>PRASAD IAS ACADEMY</h3><p>UPSC और State PCS अभ्यर्थियों के लिए अध्ययन, अभ्यास और मार्गदर्शन का शैक्षणिक मंच।</p></div>
+ <div><h4>Quick Links</h4><a href="#about">हमारे बारे में</a><a href="#courses">कोर्स</a><a href="#current">करंट अफेयर्स</a><a href="#tests">टेस्ट सीरीज़</a></div>
+ <div><h4>Contact</h4><p>मोबाइल: +91-XXXXXXXXXX</p><p>ईमेल: info@prasadiasacademy.in</p><p>पता: अपना संस्थान का पता यहाँ लिखें</p></div>
+ </div><div class="copyright">© 2026 Prasad IAS Academy. All rights reserved. | यह एक मौलिक डेमो वेबसाइट टेम्पलेट है।</div>
+</footer>
+</body></html>

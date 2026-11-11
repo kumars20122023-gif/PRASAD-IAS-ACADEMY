@@ -117,3 +117,224 @@ footer{background:#0b2038;color:#d7e3ef;padding:42px 22px 20px}.footer-inner{max
  </div><div class="copyright">© 2026 Prasad IAS Academy. All rights reserved. |।</div>
 </footer>
 </body></html>
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prasad IAS Academy - Study Material</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6fa;
+}
+header {
+  background: #102c54;
+  color: white;
+  padding: 22px;
+  text-align: center;
+}
+nav {
+  background: #183f70;
+  padding: 12px;
+  text-align: center;
+}
+nav a {
+  color: white;
+  margin: 10px;
+  text-decoration: none;
+}
+.container {
+  max-width: 950px;
+  margin: auto;
+  padding: 15px;
+}
+.subject, .admin {
+  background: white;
+  padding: 18px;
+  margin: 18px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #ddd;
+}
+h2 { color: #153c70; }
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+button {
+  background: #153c70;
+  color: white;
+  border: 0;
+  padding: 11px 16px;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+.pdf-item {
+  padding: 12px;
+  background: #f1f4f9;
+  margin: 10px 0;
+  border-radius: 7px;
+}
+.pdf-item a { margin-right: 12px; }
+footer {
+  background: #102c54;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>PRASAD IAS ACADEMY</h1>
+<p>UPSC | BPSC | Civil Services Preparation</p>
+</header>
+
+<nav>
+<a href="#history">History</a>
+<a href="#geography">Geography</a>
+<a href="#current">Current Affairs</a>
+</nav>
+
+<div class="container">
+
+<h2>📚 Study Material & PDF Notes</h2>
+
+<div class="subject" id="history">
+<h2>🏛️ History</h2>
+<div id="historyList"></div>
+</div>
+
+<div class="subject" id="geography">
+<h2>🌍 Geography</h2>
+<div id="geographyList"></div>
+</div>
+
+<div class="subject" id="current">
+<h2>📰 Current Affairs</h2>
+<div id="currentList"></div>
+</div>
+
+<div class="admin">
+<h2>🔐 Admin PDF Management</h2>
+
+<p>PDF का नाम, विषय और GitHub पर अपलोड की गई PDF का URL डालें।</p>
+
+<input id="pdfName" placeholder="PDF का नाम">
+
+<select id="pdfSubject">
+<option value="history">History</option>
+<option value="geography">Geography</option>
+<option value="current">Current Affairs</option>
+</select>
+
+<input id="pdfUrl" type="url"
+placeholder="PDF का पूरा URL डालें">
+
+<button onclick="addPDF()">Add PDF</button>
+
+<p id="message"></p>
+</div>
+
+</div>
+
+<footer>
+<p>© 2026 Prasad IAS Academy</p>
+<p>Learn Today | Lead Tomorrow</p>
+</footer>
+
+<script>
+const storageKey = "prasadAcademyPDFs";
+
+function getPDFs() {
+  try {
+    return JSON.parse(localStorage.getItem(storageKey)) || [];
+  } catch {
+    return [];
+  }
+}
+
+function renderPDFs() {
+  const subjects = {
+    history: "historyList",
+    geography: "geographyList",
+    current: "currentList"
+  };
+
+  Object.values(subjects).forEach(id => {
+    document.getElementById(id).innerHTML = "";
+  });
+
+  getPDFs().forEach((pdf, index) => {
+    const box = document.createElement("div");
+    box.className = "pdf-item";
+
+    const name = document.createElement("strong");
+    name.textContent = "📄 " + pdf.name;
+
+    const view = document.createElement("a");
+    view.href = pdf.url;
+    view.target = "_blank";
+    view.rel = "noopener noreferrer";
+    view.textContent = "View PDF";
+
+    const download = document.createElement("a");
+    download.href = pdf.url;
+    download.target = "_blank";
+    download.rel = "noopener noreferrer";
+    download.textContent = "Download / Open";
+
+    box.append(name, document.createElement("br"),
+               view, download);
+
+    document.getElementById(subjects[pdf.subject])
+      .appendChild(box);
+  });
+}
+
+function addPDF() {
+  const name = document.getElementById("pdfName").value.trim();
+  const subject = document.getElementById("pdfSubject").value;
+  const url = document.getElementById("pdfUrl").value.trim();
+  const message = document.getElementById("message");
+
+  if (!name || !url) {
+    message.textContent = "PDF का नाम और लिंक भरें।";
+    return;
+  }
+
+  try {
+    const parsed = new URL(url);
+
+    if (parsed.protocol !== "https:" &&
+        parsed.protocol !== "http:") {
+      throw new Error("Invalid URL");
+    }
+
+    const pdfs = getPDFs();
+    pdfs.push({name, subject, url});
+    localStorage.setItem(storageKey, JSON.stringify(pdfs));
+
+    document.getElementById("pdfName").value = "";
+    document.getElementById("pdfUrl").value = "";
+    message.textContent = "PDF लिंक इस ब्राउजर में जुड़ गया है।";
+    renderPDFs();
+
+  } catch (error) {
+    message.textContent = "सही PDF URL डालें या स्टोरेज की जगह जांचें।";
+  }
+}
+
+renderPDFs();
+</script>
+
+</body>
+</html>

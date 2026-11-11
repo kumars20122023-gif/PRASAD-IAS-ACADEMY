@@ -338,3 +338,325 @@ renderPDFs();
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Prasad IAS Academy Current Affairs - UPSC, BPSC and Civil Services preparation.">
+<title>Current Affairs | Prasad IAS Academy</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6fa;
+  color: #222;
+  line-height: 1.6;
+}
+
+header {
+  background: #102b50;
+  color: white;
+  text-align: center;
+  padding: 24px 12px;
+}
+
+header h1 {
+  font-size: 27px;
+}
+
+header p {
+  color: #e0e8f5;
+  margin-top: 5px;
+}
+
+nav {
+  background: #173d6c;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 12px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 9px 13px;
+  border-radius: 5px;
+}
+
+nav a:hover, nav a.active {
+  background: #e5a52b;
+  color: #14243b;
+}
+
+.hero {
+  background: linear-gradient(120deg,#173d6c,#2869a5);
+  color: white;
+  text-align: center;
+  padding: 45px 15px;
+}
+
+.hero h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: auto;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 25px auto;
+  padding: 0 15px;
+}
+
+.section-title {
+  color: #173d6c;
+  border-left: 5px solid #e5a52b;
+  padding-left: 12px;
+  margin: 25px 0 17px;
+}
+
+.search-box {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  font-size: 16px;
+  margin: 15px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+  gap: 17px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 9px;
+  box-shadow: 0 2px 9px rgba(0,0,0,.08);
+  border-top: 3px solid #e5a52b;
+}
+
+.card h3 {
+  color: #173d6c;
+  margin-bottom: 9px;
+}
+
+.card p {
+  color: #555;
+  font-size: 14px;
+}
+
+.btn {
+  display: inline-block;
+  background: #173d6c;
+  color: white;
+  text-decoration: none;
+  padding: 9px 14px;
+  margin-top: 12px;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: #e5a52b;
+  color: #222;
+}
+
+.notice {
+  background: #fff8e8;
+  border-left: 4px solid #e5a52b;
+  padding: 15px;
+  margin: 20px 0;
+}
+
+footer {
+  background: #102b50;
+  color: white;
+  text-align: center;
+  padding: 22px 10px;
+  margin-top: 35px;
+}
+
+footer a {
+  color: #ffd477;
+}
+
+@media(max-width:600px) {
+  header h1 {font-size:22px;}
+  .hero h2 {font-size:24px;}
+  nav a {font-size:13px;padding:8px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>PRASAD IAS ACADEMY</h1>
+  <p>ज्ञान • अनुशासन • सफलता</p>
+  <p>UPSC | BPSC | Civil Services Preparation</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="current-affairs.html" class="active">Current Affairs</a>
+  <a href="history.html">History</a>
+  <a href="geography.html">Geography</a>
+  <a href="courses.html">Courses</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section class="hero">
+  <h2>Current Affairs</h2>
+  <p>दैनिक समसामयिकी के साथ UPSC और BPSC परीक्षा की तैयारी को बनाएं आसान।</p>
+</section>
+
+<main class="container">
+
+  <div class="notice">
+    <strong>Prasad IAS Academy:</strong>
+    यहाँ राष्ट्रीय, अंतरराष्ट्रीय, अर्थव्यवस्था,
+    विज्ञान एवं प्रौद्योगिकी और सरकारी योजनाओं
+    से संबंधित अध्ययन सामग्री उपलब्ध होगी।
+  </div>
+
+  <h2 class="section-title">Study Material खोजें</h2>
+  <input
+    type="text"
+    id="search"
+    class="search-box"
+    placeholder="यहाँ विषय खोजें..."
+    onkeyup="searchMaterial()"
+  >
+
+  <h2 class="section-title">Current Affairs Categories</h2>
+
+  <div class="grid" id="material">
+
+    <div class="card">
+      <h3>राष्ट्रीय समाचार</h3>
+      <p>भारत सरकार, संसद, राजनीति और राष्ट्रीय घटनाक्रम।</p>
+      <a class="btn" href="national.html">Read More</a>
+    </div>
+
+    <div class="card">
+      <h3>अंतरराष्ट्रीय संबंध</h3>
+      <p>भारत के दूसरे देशों से संबंध और वैश्विक घटनाएँ।</p>
+      <a class="btn" href="international.html">Read More</a>
+    </div>
+
+    <div class="card">
+      <h3>अर्थव्यवस्था</h3>
+      <p>बजट, बैंकिंग, RBI, आर्थिक सर्वेक्षण और योजनाएँ।</p>
+      <a class="btn" href="economy.html">Read More</a>
+    </div>
+
+    <div class="card">
+      <h3>विज्ञान एवं प्रौद्योगिकी</h3>
+      <p>अंतरिक्ष, AI, परमाणु ऊर्जा और नई तकनीक।</p>
+      <a class="btn" href="science.html">Read More</a>
+    </div>
+
+    <div class="card">
+      <h3>पर्यावरण एवं पारिस्थितिकी</h3>
+      <p>जलवायु परिवर्तन, जैव विविधता और पर्यावरण रिपोर्ट।</p>
+      <a class="btn" href="environment.html">Read More</a>
+    </div>
+
+    <div class="card">
+      <h3>सरकारी योजनाएँ</h3>
+      <p>केंद्र एवं राज्य सरकार की महत्वपूर्ण योजनाएँ।</p>
+      <a class="btn" href="schemes.html">Read More</a>
+    </div>
+
+  </div>
+
+  <h2 class="section-title">Daily Current Affairs</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Daily Current Affairs</h3>
+      <p>रोजाना महत्वपूर्ण समाचार और उनका विश्लेषण।</p>
+      <a href="daily-current-affairs.html" class="btn">Open</a>
+    </div>
+
+    <div class="card">
+      <h3>Monthly Current Affairs</h3>
+      <p>महीने भर की महत्वपूर्ण घटनाओं का संकलन।</p>
+      <a href="monthly-current-affairs.html" class="btn">Open</a>
+    </div>
+
+    <div class="card">
+      <h3>Current Affairs MCQ</h3>
+      <p>UPSC और BPSC के लिए अभ्यास प्रश्न।</p>
+      <a href="current-affairs-mcq.html" class="btn">Practice</a>
+    </div>
+
+    <div class="card">
+      <h3>PDF Notes</h3>
+      <p>डाउनलोड करने योग्य Current Affairs अध्ययन नोट्स।</p>
+      <a href="pdf-notes.html" class="btn">View PDFs</a>
+    </div>
+  </div>
+
+  <h2 class="section-title">Exam Preparation</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>UPSC Preparation</h3>
+      <p>Prelims, Mains और Interview की तैयारी।</p>
+      <a href="upsc.html" class="btn">Explore UPSC</a>
+    </div>
+
+    <div class="card">
+      <h3>BPSC Preparation</h3>
+      <p>BPSC प्रारंभिक एवं मुख्य परीक्षा के लिए सामग्री।</p>
+      <a href="bpsc.html" class="btn">Explore BPSC</a>
+    </div>
+  </div>
+
+  <div class="notice">
+    <strong>नोट:</strong> वेबसाइट पर सामग्री नियमित रूप से अपडेट करें।
+    किसी भी PDF या लेख का लिंक जोड़ने से पहले उसकी फाइल
+    वेबसाइट पर अपलोड करें।
+  </div>
+
+</main>
+
+<footer>
+  <h3>PRASAD IAS ACADEMY</h3>
+  <p>आपकी सफलता, हमारा संकल्प।</p>
+  <p>UPSC | BPSC | Civil Services</p>
+  <p>© 2026 Prasad IAS Academy. All Rights Reserved.</p>
+  <p><a href="index.html">Back to Home</a></p>
+</footer>
+
+<script>
+function searchMaterial() {
+  let input = document.getElementById("search")
+    .value.toLowerCase();
+
+  let cards = document.querySelectorAll("#material .card");
+
+  cards.forEach(function(card) {
+    let content = card.innerText.toLowerCase();
+    card.style.display =
+      content.includes(input) ? "block" : "none";
+  });
+}
+</script>
+
+</body>
